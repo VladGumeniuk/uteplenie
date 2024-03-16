@@ -746,8 +746,8 @@
     <ul class="md:grid grid-cols-3 gap-5 hidden">
       <template x-for="(item, index) in reviews">
         <li class="bg-[#353739] rounded-[10px] p-5">
-          <div class="flex justify-between gap-2 items-center">
-            <h3 class="font-bold text-xl text-yellow mb-5" x-text="item.name"></h3>
+          <div class="flex justify-between gap-2 items-center mb-5">
+            <h3 class="font-bold text-xl text-yellow" x-text="item.name"></h3>
             <img src="./img/svg/stars.svg" alt="stars">
           </div>
           <p class="text-white text-base font-light" x-text="item.text"></p>
@@ -757,8 +757,8 @@
     <ul class="flex flex-col gap-5 md:hidden">
       <template x-for="(item, index) in reviews.slice(0, 2)">
         <li class="bg-[#353739] rounded-[10px] p-5">
-          <div class="flex justify-between gap-2 items-center">
-            <h3 class="font-bold text-xl text-yellow mb-5" x-text="item.name"></h3>
+          <div class="flex justify-between gap-2 items-center mb-5">
+            <h3 class="font-bold text-xl text-yellow" x-text="item.name"></h3>
             <img src="./img/svg/stars.svg" alt="stars">
           </div>
           <p class="text-white text-base font-light" x-text="item.text"></p>
@@ -766,8 +766,8 @@
       </template>
       <template x-for="(item, index) in reviews.slice(2)">
         <li x-show="more" x-collapse.duration.1000ms class="bg-[#353739] rounded-[10px] p-5">
-          <div class="flex justify-between gap-2 items-center">
-            <h3 class="font-bold text-xl text-yellow mb-5" x-text="item.name"></h3>
+          <div class="flex justify-between gap-2 items-center mb-5">
+            <h3 class="font-bold text-xl text-yellow" x-text="item.name"></h3>
             <img src="./img/svg/stars.svg" alt="stars">
           </div>
           <p class="text-white text-base font-light" x-text="item.text"></p>
@@ -785,7 +785,7 @@
 </section>
         <section id="our-works" x-data="content" class="section">
   <div x-data="{more: false}" class="container">
-    <h2 class="font-bold text-center md:text-5xl text-2xl mb-7 text-white">Наші работи</h2>
+    <h2 class="font-bold text-center md:text-5xl text-2xl mb-7 text-white">Наші роботи</h2>
     <ul class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 gap-5">
       <template x-for="(item, index) in our_works.slice(0, 4)">
         <li>
