@@ -3701,64 +3701,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const our_works = [{
   id: 1,
-  img: "./img/mainPage/1.JPG"
+  img: "./img/mainPage/1.jpg"
 }, {
   id: 2,
-  img: "./img/mainPage/2.JPG"
+  img: "./img/mainPage/2.jpg"
 }, {
   id: 3,
-  img: "./img/mainPage/3.JPG"
+  img: "./img/mainPage/3.jpg"
 }, {
   id: 4,
-  img: "./img/mainPage/4.JPG"
+  img: "./img/mainPage/4.jpg"
 }, {
   id: 5,
-  img: "./img/mainPage/5.JPG"
+  img: "./img/mainPage/5.jpg"
 }, {
   id: 6,
-  img: "./img/mainPage/6.JPG"
+  img: "./img/mainPage/6.jpg"
 }, {
   id: 7,
-  img: "./img/mainPage/7.JPG"
+  img: "./img/mainPage/7.jpg"
 }, {
   id: 8,
-  img: "./img/mainPage/8.JPG"
+  img: "./img/mainPage/8.jpg"
 }, {
   id: 9,
-  img: "./img/mainPage/9.JPG"
+  img: "./img/mainPage/9.jpg"
 }, {
   id: 10,
-  img: "./img/mainPage/10.JPG"
+  img: "./img/mainPage/10.jpg"
 }, {
   id: 11,
-  img: "./img/mainPage/11.JPG"
+  img: "./img/mainPage/11.jpg"
 }, {
   id: 12,
-  img: "./img/mainPage/12.JPG"
+  img: "./img/mainPage/12.jpg"
 }, {
   id: 13,
-  img: "./img/mainPage/13.JPG"
+  img: "./img/mainPage/13.jpg"
 }, {
   id: 14,
-  img: "./img/mainPage/14.JPG"
+  img: "./img/mainPage/14.jpg"
 }, {
   id: 15,
-  img: "./img/mainPage/15.JPG"
+  img: "./img/mainPage/15.jpg"
 }, {
   id: 16,
-  img: "./img/mainPage/16.JPG"
+  img: "./img/mainPage/16.jpg"
 }, {
   id: 17,
-  img: "./img/mainPage/17.JPG"
+  img: "./img/mainPage/17.jpg"
 }, {
   id: 18,
-  img: "./img/mainPage/18.JPG"
+  img: "./img/mainPage/18.jpg"
 }, {
   id: 19,
-  img: "./img/mainPage/19.JPG"
+  img: "./img/mainPage/19.jpg"
 }, {
   id: 20,
-  img: "./img/mainPage/20.JPG"
+  img: "./img/mainPage/20.jpg"
 }];
 
 /***/ }),
