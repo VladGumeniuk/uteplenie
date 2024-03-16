@@ -632,6 +632,12 @@ video {
 .mt-\[54px\]{
   margin-top: 54px;
 }
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+.mb-1{
+  margin-bottom: 0.25rem;
+}
 .block{
   display: block;
 }
@@ -798,6 +804,16 @@ video {
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
+.space-y-5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
 .rounded-\[10px\]{
   border-radius: 10px;
 }
@@ -905,6 +921,9 @@ video {
 }
 .text-right{
   text-align: right;
+}
+.font-secondary{
+  font-family: Gotham, sans-serif;
 }
 .text-2xl{
   font-size: 1.5rem;
@@ -1742,6 +1761,17 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: hidden;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/Gotham-Light.otf") format("opentype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/Gotham-Medium.otf") format("opentype");
+  font-weight: 500;
 }
 [x-cloak] {
   display: none !important;
