@@ -31,6 +31,9 @@
             <a href="#">
                 <img class="md:w-[75px] w-[50px] h-full object-cover" src="./img/mainPage/logo.png" alt="logo" />
             </a>
+            <div>
+
+            </div>
             <div class="ml-4 flex gap-3">
                 <button
                   @click="$store.currentLanguage.changeLang('ua')"
@@ -53,7 +56,7 @@
             </div>
         </div>
 
-        <ul class="hidden md:flex gap-10 text-base text-white">
+        <ul class="hidden lg:flex gap-10 xl:text-base text-xs text-white">
             <li>
                 <a href="#price">
                     <span x-text="$store.currentLanguage.lang.header.price">Ціни</span>
@@ -87,8 +90,8 @@
         </ul>
 
         <a
-          class="flex items-center gap-2 text-white md:text-base text-xs"
-          href="tel:380735711511">
+          class="flex items-center gap-2 text-white lg:text-base text-xs"
+          href="tel:380505624937">
             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
                 <g clip-path="url(#clip0_2_1286)">
                     <path d="M11.9146 3.95833C12.6879 4.10919 13.3985 4.48737 13.9556 5.04445C14.5127 5.60152 14.8908 6.31217 15.0417 7.08541M11.9146 0.791664C13.5211 0.970134 15.0192 1.68955 16.1629 2.83179C17.3066 3.97404 18.0279 5.47121 18.2084 7.0775M17.4167 13.395V15.77C17.4176 15.9905 17.3724 16.2087 17.2841 16.4107C17.1958 16.6127 17.0662 16.7941 16.9038 16.9431C16.7413 17.0922 16.5495 17.2057 16.3406 17.2763C16.1318 17.3469 15.9104 17.3732 15.6909 17.3533C13.2548 17.0886 10.9147 16.2562 8.85878 14.9229C6.94598 13.7074 5.32425 12.0857 4.10878 10.1729C2.77084 8.10762 1.93822 5.7562 1.67836 3.30916C1.65858 3.09024 1.6846 2.8696 1.75476 2.66128C1.82492 2.45297 1.93769 2.26154 2.08588 2.0992C2.23408 1.93685 2.41446 1.80714 2.61553 1.71833C2.8166 1.62951 3.03396 1.58354 3.25378 1.58333H5.62878C6.01298 1.57955 6.38545 1.7156 6.67676 1.96613C6.96807 2.21665 7.15834 2.56456 7.21211 2.945C7.31235 3.70505 7.49826 4.45132 7.76628 5.16958C7.87279 5.45294 7.89584 5.76089 7.8327 6.05694C7.76956 6.353 7.62288 6.62475 7.41003 6.84L6.40461 7.84541C7.53159 9.82739 9.17264 11.4684 11.1546 12.5954L12.16 11.59C12.3753 11.3771 12.647 11.2305 12.9431 11.1673C13.2391 11.1042 13.5471 11.1272 13.8304 11.2337C14.5487 11.5018 15.295 11.6877 16.055 11.7879C16.4396 11.8422 16.7908 12.0359 17.0419 12.3322C17.2929 12.6285 17.4263 13.0067 17.4167 13.395Z" stroke="#FFB901" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -99,10 +102,10 @@
                     </clipPath>
                 </defs>
             </svg>
-            <span>+380 (73) 57 11 511</span>
+            <span>+380 50 562 49 37</span>
         </a>
 
-        <button class="block md:hidden" type="button" @click="$store.mobileMenu.show()">
+        <button class="block lg:hidden" type="button" @click="$store.mobileMenu.show()">
             <img class="w-full h-full object-cover" src="./img/svg/burger.svg" alt="burger" />
         </button>
     </div>
@@ -112,7 +115,7 @@
     <main class="main">
         <section
     id="hero"
-    class="min-h-screen relative flex"
+    class="min-h-screen relative flex pt-[80px]"
 >
     <img
       class="w-full h-full object-cover -z-10 absolute inset-0"
@@ -122,7 +125,7 @@
     <div class="absolute bg-black/70 inset-0 -z-10"></div>
     <div class="container flex flex-col justify-center">
         <!-- DESKTOP TEXT -->
-        <h1 class="font-bold md:text-6xl text-3xl text-white">
+        <h1 class="font-bold lg:text-6xl md:text-4xl text-2xl text-white">
             ПромАльп<span class="text-yellow">Сервіс</span>
         </h1>
         <p class="text-white md:text-2xl text-base mt-8 md:max-w-[418px] font-secondary">
@@ -565,9 +568,12 @@
 
     <div
       x-data="{open: false, name: 'Обрати матеріал', id: null}"
-      :class="{'pb-[70px]' : id > 0 }"
+      :class="{'pb-[90px]' : id > 0 }"
       class="max-w-[500px] mx-auto relative">
       <div class="w-full relative">
+        <p class="text-center text-2xl text-yellow mb-3 font-bold">
+          Прайс-лист
+        </p>
         <button
           @click="open = !open"
           x-text="name"
@@ -580,104 +586,104 @@
           class="absolute z-10 text-white md:text-lg text-xs space-y-3 bg-black px-4 py-3 border-[2px] border-yellow rounded-[20px] w-full">
           <li>
             <button @click="name = 'Пінопласт 50мм / 35 пл';open = !open; id = 1">
-              Пінопласт 50мм / 35 пл
+              Пінопласт 50мм(15кг.м3)
             </button>
           </li>
           <li>
             <button @click="name = 'Пінопласт 100мм / 25 пл';open = !open; id = 2">
-              Пінопласт 100мм / 25 пл
+              Пінопласт 100мм(10кг.м3)
             </button>
           </li>
           <li>
             <button @click="name = 'Пінопласт 100мм / 35 пл';open = !open; id = 3">
-              Пінопласт 100мм / 35 пл
+              Пінопласт 100мм(15кг.м3)
             </button>
           </li>
           <li>
             <button @click="name = 'Графітовий пінопласт 50мм / 14кг';open = !open; id = 4">
-              Графітовий пінопласт 50мм / 14кг
+              Графітовий пінопласт 50мм(15кг.м3)
             </button>
           </li>
           <li>
             <button @click="name = 'Графітовий пінопласт 100мм / 14кг';open = !open; id = 5">
-              Графітовий пінопласт 100мм / 14кг
+              Графітовий пінопласт 100мм(15кг.м3)
             </button>
           </li>
         </ul>
       </div>
 
-      <ul x-show="id == 1" x-transition.duration.1000ms class="absolute top-8 md:top-[50px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
+      <ul x-show="id == 1" x-transition.duration.1000ms class="absolute top-[75px] md:top-[90px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
         <li class="flex">
           <p class="w-1/2">1 квартира</p>
-          <p class="w-1/2 border-l-[2px] border-yellow pl-4">900₴ / м.кв</p>
+          <p class="w-1/2 border-l-[2px] border-yellow pl-4">1100₴ / м.кв</p>
         </li>
         <li class="flex">
-          <p class="w-1/2">1 квартира</p>
-          <p class="w-1/2 border-l-[2px] border-yellow pl-4">900₴ / м.кв</p>
+          <p class="w-1/2">2 квартира</p>
+          <p class="w-1/2 border-l-[2px] border-yellow pl-4">1050₴ / м.кв</p>
         </li>
         <li class="flex">
-          <p class="w-1/2">1 квартира</p>
-          <p class="w-1/2 border-l-[2px] border-yellow pl-4">900₴ / м.кв</p>
-        </li>
-      </ul>
-
-      <ul x-show="id == 2" x-transition.duration.1000ms class="absolute top-8 md:top-[50px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
-        <li class="flex">
-          <p class="w-1/2">1 квартира</p>
-          <p class="w-1/2 border-l-[2px] border-yellow pl-4">950₴ / м.кв</p>
-        </li>
-        <li class="flex">
-          <p class="w-1/2">1 квартира</p>
-          <p class="w-1/2 border-l-[2px] border-yellow pl-4">950₴ / м.кв</p>
-        </li>
-        <li class="flex">
-          <p class="w-1/2">1 квартира</p>
-          <p class="w-1/2 border-l-[2px] border-yellow pl-4">950₴ / м.кв</p>
-        </li>
-      </ul>
-
-      <ul x-show="id == 3" x-transition.duration.1000ms class="absolute top-8 md:top-[50px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
-        <li class="flex">
-          <p class="w-1/2">1 квартира</p>
-          <p class="w-1/2 border-l-[2px] border-yellow pl-4">1000₴ / м.кв</p>
-        </li>
-        <li class="flex">
-          <p class="w-1/2">1 квартира</p>
-          <p class="w-1/2 border-l-[2px] border-yellow pl-4">1000₴ / м.кв</p>
-        </li>
-        <li class="flex">
-          <p class="w-1/2">1 квартира</p>
+          <p class="w-1/2">3 квартира</p>
           <p class="w-1/2 border-l-[2px] border-yellow pl-4">1000₴ / м.кв</p>
         </li>
       </ul>
 
-      <ul x-show="id == 4" x-transition.duration.1000ms class="absolute top-8 md:top-[50px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
+      <ul x-show="id == 2" x-transition.duration.1000ms class="absolute top-[75px] md:top-[90px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
         <li class="flex">
           <p class="w-1/2">1 квартира</p>
           <p class="w-1/2 border-l-[2px] border-yellow pl-4">1150₴ / м.кв</p>
         </li>
         <li class="flex">
-          <p class="w-1/2">1 квартира</p>
-          <p class="w-1/2 border-l-[2px] border-yellow pl-4">1150₴ / м.кв</p>
+          <p class="w-1/2">2 квартира</p>
+          <p class="w-1/2 border-l-[2px] border-yellow pl-4">1100₴ / м.кв</p>
         </li>
         <li class="flex">
+          <p class="w-1/2">3 квартира</p>
+          <p class="w-1/2 border-l-[2px] border-yellow pl-4">1050₴ / м.кв</p>
+        </li>
+      </ul>
+
+      <ul x-show="id == 3" x-transition.duration.1000ms class="absolute top-[75px] md:top-[90px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
+        <li class="flex">
           <p class="w-1/2">1 квартира</p>
+          <p class="w-1/2 border-l-[2px] border-yellow pl-4">1250₴ / м.кв</p>
+        </li>
+        <li class="flex">
+          <p class="w-1/2">2 квартира</p>
+          <p class="w-1/2 border-l-[2px] border-yellow pl-4">1200₴ / м.кв</p>
+        </li>
+        <li class="flex">
+          <p class="w-1/2">3 квартира</p>
           <p class="w-1/2 border-l-[2px] border-yellow pl-4">1150₴ / м.кв</p>
         </li>
       </ul>
 
-      <ul x-show="id == 5" x-transition.duration.1000ms class="absolute top-8 md:top-[50px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
+      <ul x-show="id == 4" x-transition.duration.1000ms class="absolute top-[75px] md:top-[90px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
         <li class="flex">
           <p class="w-1/2">1 квартира</p>
-          <p class="w-1/2 border-l-[2px] border-yellow pl-4">1250₴ / м.кв</p>
+          <p class="w-1/2 border-l-[2px] border-yellow pl-4">1350₴ / м.кв</p>
         </li>
         <li class="flex">
-          <p class="w-1/2">1 квартира</p>
-          <p class="w-1/2 border-l-[2px] border-yellow pl-4">1250₴ / м.кв</p>
+          <p class="w-1/2">2 квартира</p>
+          <p class="w-1/2 border-l-[2px] border-yellow pl-4">1300₴ / м.кв</p>
         </li>
         <li class="flex">
-          <p class="w-1/2">1 квартира</p>
+          <p class="w-1/2">3 квартира</p>
           <p class="w-1/2 border-l-[2px] border-yellow pl-4">1250₴ / м.кв</p>
+        </li>
+      </ul>
+
+      <ul x-show="id == 5" x-transition.duration.1000ms class="absolute top-[75px] md:top-[90px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
+        <li class="flex">
+          <p class="w-1/2">1 квартира</p>
+          <p class="w-1/2 border-l-[2px] border-yellow pl-4">1400₴ / м.кв</p>
+        </li>
+        <li class="flex">
+          <p class="w-1/2">2 квартира</p>
+          <p class="w-1/2 border-l-[2px] border-yellow pl-4">1350₴ / м.кв</p>
+        </li>
+        <li class="flex">
+          <p class="w-1/2">3 квартира</p>
+          <p class="w-1/2 border-l-[2px] border-yellow pl-4">1300₴ / м.кв</p>
         </li>
       </ul>
 
@@ -783,17 +789,69 @@
     </button>
   </div>
 </section>
-        <section id="our-works" x-data="content" class="section">
+        <style>
+  .swiper-wrapper {
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: #000;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 14px;
+    font-weight: 900;
+    color: #FFB901;
+  }
+
+  .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 15px;
+    left: auto;
+  }
+  .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 15px;
+    right: auto;
+  }
+  @media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 18px;
+      height: 18px;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 10px;
+      font-weight: 900;
+    }
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+      right: -25px;
+      left: auto;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      left: -25px;
+      right: auto;
+    }
+  }
+</style>
+
+<section id="our-works" x-data="content" class="section">
   <div x-data="{more: false}" class="container">
     <h2 class="font-bold text-center md:text-5xl text-2xl mb-7 text-white">Наші роботи</h2>
     <ul class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 gap-5">
       <template x-for="(item, index) in our_works.slice(0, 4)">
-        <li>
+        <li @click="idSlide = item.id;openModal = !openModal;console.log(idSlide)" class="cursor-pointer">
           <img :src="item.img" :alt="index" class="aspect-square">
         </li>
       </template>
       <template x-for="(item, index) in our_works.slice(4)">
-        <li x-show="more" x-collapse.duration.1000ms>
+        <li x-show="more" x-collapse.duration.1000ms @click="idSlide = item.id;openModal = !openModal" class="cursor-pointer">
           <img :src="item.img" :alt="index" class="aspect-square">
         </li>
       </template>
@@ -805,7 +863,27 @@
       <span x-show="!more">Показати більше</span>
       <span x-show="more">Показати меньше</span>
     </button>
-  </div>
+
+    <div x-show="openModal" x-transition.duration.500ms class="fixed inset-0 z-30 flex items-center justify-center">
+        <div class="mx-auto md:max-w-[650px] max-w-[300px] items-center">
+          <template x-for="item in our_works">
+            <template x-if="item.id === idSlide">
+              <div class="relative flex justify-center">
+                <img :src="item.img" :alt="index" class="aspect-square">
+                <button
+                  @click="hide()"
+                  type="button"
+                  class="absolute top-3 w-[30px] h-[30px] right-3 cursor-pointer z-40 font-black text-yellow text-base bg-black rounded-full">
+                  X
+                </button>
+              </div>
+            </template>
+          </template>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
 </section>
     </main>
 
@@ -846,9 +924,9 @@
           Контакти:
         </h3>
         <div class="mt-3">
-          <a class="text-[#2B2E31] flex items-center gap-2 justify-end font-secondary" href="tel:380735711511">
+          <a class="text-[#2B2E31] flex items-center gap-2 justify-end font-secondary" href="tel:380505624937">
             <img src="./img/svg/phone.svg" alt="phone">
-            <span>+380 (73) 57 11 511</span>
+            <span>+380 50 562 49 37</span>
           </a>
         </div>
         <div class="mt-3">
@@ -872,12 +950,12 @@
         x-transition:leave="transition ease-in duration-300"
         x-transition:leave-start="translate-x-0"
         x-transition:leave-end="translate-x-3/4"
-        class="fixed top-0 right-0 z-50 flex h-full w-full touch-none flex-col items-start justify-start bg-white md:hidden"
+        class="fixed top-0 right-0 z-50 flex h-full w-full touch-none flex-col items-start justify-start bg-white lg:hidden"
 >
  <button class="p-5" type="button" @click="$store.mobileMenu.hide()">
   <img class="w-full h-full object-cover" src="./img/svg/close.svg" alt="close" />
  </button>
- <ul class="flex p-5 flex-col gap-4 text-lg">
+ <ul class="flex p-5 flex-col gap-4 text-lg overflow-y-scroll w-full">
   <li>
    <a href="#price" @click="$store.mobileMenu.hide()">
     <span x-text="$store.currentLanguage.lang.header.price">Ціни</span>
@@ -914,23 +992,6 @@
     <script>
         const headerElement = document.querySelector('header'); // замените 'header' на ваш селектор
         const headerHeight = headerElement.offsetHeight;
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                const target = document.querySelector(this.getAttribute('href'));
-
-                if (target) {
-                    const targetPosition = target.getBoundingClientRect().top + window.scrollY;
-
-                    window.scrollTo({
-                        top: targetPosition - headerHeight,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
 
         document.addEventListener('scroll', (e) => {
             if (window.pageYOffset > 0) {

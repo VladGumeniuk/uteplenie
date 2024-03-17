@@ -3441,97 +3441,38 @@ swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MOD
 const content = () => ({
   our_works: _vendor_our_works_js__WEBPACK_IMPORTED_MODULE_1__.our_works,
   reviews: _vendor_reviews_js__WEBPACK_IMPORTED_MODULE_2__.reviews,
-  slider: null,
+  sliderModal: null,
+  idSlide: null,
+  openModal: false,
   init() {
     document.addEventListener("DOMContentLoaded", () => {
-      // this.initSwiper();
+      this.initSwiper();
       this.our_works = _vendor_our_works_js__WEBPACK_IMPORTED_MODULE_1__.our_works;
       this.reviews = _vendor_reviews_js__WEBPACK_IMPORTED_MODULE_2__.reviews;
     });
   },
   show() {
     this.openModal = true;
-    alpinejs__WEBPACK_IMPORTED_MODULE_3__["default"].store("stopScroll").enable();
+    // Alpine.store("stopScroll").enable();
   },
+
   hide() {
     this.openModal = false;
-    alpinejs__WEBPACK_IMPORTED_MODULE_3__["default"].store("stopScroll").disable();
-  }
-
-  // initSwiper() {
-  //     this.sliderMain = new Swiper(this.$refs["reviews-swiper"], {
-  //         // loop: true,
-  //         slidesPerView: 2,
-  //         spaceBetween: 15,
-  //         // allowTouchMove: false,
-  //         speed: 6000,
-  //         freeMode: true,
-  //         autoplay: {
-  //             delay: 0,
-  //             disableOnInteraction: false,
-  //         },
-  //         breakpoints: {
-  //             768: {
-  //                 slidesPerView: 3,
-  //             },
-  //             992: {
-  //                 slidesPerView: 4,
-  //                 spaceBetween: 30,
-  //             },
-  //         },
-  //     });
-  //
-  //     this.sliderModal = new Swiper(this.$refs["reviews-swiper-modal"], {
-  //         slidesPerView: 1,
-  //         initialSlide: this.idSlide,
-  //         spaceBetween: 15,
-  //         // allowTouchMove: false,
-  //         speed: 1000,
-  //         navigation: {
-  //             nextEl: ".swiper-button-next",
-  //             prevEl: ".swiper-button-prev",
-  //         },
-  //     });
-  // },
-});
-
-/***/ }),
-
-/***/ "./src/js/components/slider-swiper.js":
-/*!********************************************!*\
-  !*** ./src/js/components/slider-swiper.js ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   sliderSwiper: () => (/* binding */ sliderSwiper)
-/* harmony export */ });
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
-
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);
-const sliderOptions = {
-  cards: {
-    spaceBetween: 20,
-    loop: true,
-    slidesPerView: 1,
-    autoHeight: true,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  }
-};
-const sliderSwiper = sliderOption => ({
-  slider: null,
-  init() {
-    document.addEventListener('DOMContentLoaded', () => {
-      this.initSwiper();
-    });
+    // Alpine.store("stopScroll").disable();
   },
+
   initSwiper() {
-    this.slider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](this.$el, sliderOptions[sliderOption]);
+    this.sliderModal = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](this.$refs["swiper-modal"], {
+      slidesPerView: 1,
+      initialSlide: this.idSlide,
+      spaceBetween: 15,
+      // allowTouchMove: false,
+      speed: 1000,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    });
   }
 });
 
@@ -3548,21 +3489,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   currentLanguage: () => (/* binding */ currentLanguage)
 /* harmony export */ });
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
+/* harmony import */ var _vendor_ua_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../vendor/ua.js */ "./src/js/vendor/ua.js");
+/* harmony import */ var _vendor_ru_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../vendor/ru.js */ "./src/js/vendor/ru.js");
+
+
 
 const currentLanguage = {
-  lang: {},
+  ua: _vendor_ua_js__WEBPACK_IMPORTED_MODULE_1__.ua,
+  ru: _vendor_ru_js__WEBPACK_IMPORTED_MODULE_2__.ru,
+  lang: [],
   id: 1,
   init() {
+    this.ru = _vendor_ru_js__WEBPACK_IMPORTED_MODULE_2__.ru;
+    this.ua = _vendor_ua_js__WEBPACK_IMPORTED_MODULE_1__.ua;
     setTimeout(e => {
-      this.lang = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].store("ua");
+      this.lang = this.ua;
     }, 10);
   },
   changeLang(str) {
     if (str === 'ua') {
-      this.lang = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].store("ua");
+      this.lang = this.ua;
       this.id = 1;
     } else if (str === 'ru') {
-      this.lang = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].store("ru");
+      this.lang = this.ru;
       this.id = 2;
     }
   }
@@ -3591,35 +3540,6 @@ const mobileMenu = {
   hide() {
     this.visible = false;
     alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].store("stopScroll").disable();
-  }
-};
-
-/***/ }),
-
-/***/ "./src/js/store/ru.js":
-/*!****************************!*\
-  !*** ./src/js/store/ru.js ***!
-  \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   ru: () => (/* binding */ ru)
-/* harmony export */ });
-const ru = {
-  title: 'Утепление фасадов квартир и стен домов в Киеве',
-  header: {
-    price: 'Цены',
-    blog: 'Блог',
-    reviews: 'Отзывы',
-    gallery: 'Галерея',
-    contacts: 'Контакты'
-  },
-  hero: {
-    title: '',
-    text: '',
-    subtitle: '',
-    btnText: ''
   }
 };
 
@@ -3654,36 +3574,6 @@ const stopScroll = {
     this.body.style.marginTop = "";
     window.scrollTo(0, this.scrollPosition);
     this.isScrollable = true;
-  }
-};
-
-/***/ }),
-
-/***/ "./src/js/store/ua.js":
-/*!****************************!*\
-  !*** ./src/js/store/ua.js ***!
-  \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   ua: () => (/* binding */ ua)
-/* harmony export */ });
-const ua = {
-  title: 'Утеплення фасадів квартир та стін будинків у Києві',
-  header: {
-    price: 'Ціни',
-    blog: 'Про нас',
-    reviews: 'Стаття',
-    gallery: 'Відгуки',
-    work: 'Наші роботи',
-    contacts: 'Контакти'
-  },
-  hero: {
-    title: 'Утеплення фасадів квартир та стін будинків у Києві',
-    text: '',
-    subtitle: '',
-    btnText: ''
   }
 };
 
@@ -3798,6 +3688,64 @@ const reviews = [{
   name: "Оксана",
   text: "Будинок став більш комфортним і енергоефективним після утеплення фасаду. Рекомендую!"
 }];
+
+/***/ }),
+
+/***/ "./src/js/vendor/ru.js":
+/*!*****************************!*\
+  !*** ./src/js/vendor/ru.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ru: () => (/* binding */ ru)
+/* harmony export */ });
+const ru = {
+  header: {
+    price: 'Цены',
+    blog: 'О нас',
+    reviews: 'Статья',
+    gallery: 'Отзывы',
+    work: 'Наши роботи',
+    contacts: 'Контакты'
+  },
+  hero: {
+    title: 'Утеплення фасадів квартир та стін будинків у Києві',
+    text: '',
+    subtitle: '',
+    btnText: ''
+  }
+};
+
+/***/ }),
+
+/***/ "./src/js/vendor/ua.js":
+/*!*****************************!*\
+  !*** ./src/js/vendor/ua.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ua: () => (/* binding */ ua)
+/* harmony export */ });
+const ua = {
+  header: {
+    price: 'Ціни',
+    blog: 'Про нас',
+    reviews: 'Стаття',
+    gallery: 'Відгуки',
+    work: 'Наші роботи',
+    contacts: 'Контакти'
+  },
+  hero: {
+    title: 'Утеплення фасадів квартир та стін будинків у Києві',
+    text: '',
+    subtitle: '',
+    btnText: ''
+  }
+};
 
 /***/ }),
 
@@ -16356,16 +16304,10 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
 /* harmony import */ var _alpinejs_collapse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @alpinejs/collapse */ "./node_modules/@alpinejs/collapse/dist/module.esm.js");
-/* harmony import */ var _store_ru__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/ru */ "./src/js/store/ru.js");
-/* harmony import */ var _store_ua__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/ua */ "./src/js/store/ua.js");
-/* harmony import */ var _store_mobile_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./store/mobile-menu */ "./src/js/store/mobile-menu.js");
-/* harmony import */ var _store_stop_scroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./store/stop-scroll */ "./src/js/store/stop-scroll.js");
-/* harmony import */ var _components_content__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/content */ "./src/js/components/content.js");
-/* harmony import */ var _store_currentLanguage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./store/currentLanguage */ "./src/js/store/currentLanguage.js");
-/* harmony import */ var _components_slider_swiper__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/slider-swiper */ "./src/js/components/slider-swiper.js");
-
-
-
+/* harmony import */ var _store_mobile_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/mobile-menu */ "./src/js/store/mobile-menu.js");
+/* harmony import */ var _store_stop_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/stop-scroll */ "./src/js/store/stop-scroll.js");
+/* harmony import */ var _components_content__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/content */ "./src/js/components/content.js");
+/* harmony import */ var _store_currentLanguage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./store/currentLanguage */ "./src/js/store/currentLanguage.js");
 
 
 
@@ -16374,13 +16316,10 @@ __webpack_require__.r(__webpack_exports__);
 
 document.addEventListener('alpine:init', () => {
   alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].plugin(_alpinejs_collapse__WEBPACK_IMPORTED_MODULE_1__["default"]);
-  alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].store("ru", _store_ru__WEBPACK_IMPORTED_MODULE_2__.ru);
-  alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].store("ua", _store_ua__WEBPACK_IMPORTED_MODULE_3__.ua);
-  alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].store("mobileMenu", _store_mobile_menu__WEBPACK_IMPORTED_MODULE_4__.mobileMenu);
-  alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].store("stopScroll", _store_stop_scroll__WEBPACK_IMPORTED_MODULE_5__.stopScroll);
-  alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].store("currentLanguage", _store_currentLanguage__WEBPACK_IMPORTED_MODULE_7__.currentLanguage);
-  alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data("content", _components_content__WEBPACK_IMPORTED_MODULE_6__.content);
-  alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data("sliderSwiper", _components_slider_swiper__WEBPACK_IMPORTED_MODULE_8__.sliderSwiper);
+  alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].store("mobileMenu", _store_mobile_menu__WEBPACK_IMPORTED_MODULE_2__.mobileMenu);
+  alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].store("stopScroll", _store_stop_scroll__WEBPACK_IMPORTED_MODULE_3__.stopScroll);
+  alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].store("currentLanguage", _store_currentLanguage__WEBPACK_IMPORTED_MODULE_5__.currentLanguage);
+  alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data("content", _components_content__WEBPACK_IMPORTED_MODULE_4__.content);
 });
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
