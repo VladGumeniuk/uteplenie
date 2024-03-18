@@ -563,22 +563,20 @@
     <div class="mb-[50px] md:text-xl text-sm text-white text-center font-medium max-w-[721px] mx-auto font-secondary">
       Дуже вигідно утеплюватися разом із сусідами,
       оскільки вартість квадратного метра знижується кожному за учасника.
-      Від компанії "ТеплоМартин" знижка -10% для пенсіонерів м.Києва
+      Від компанії "ПромАльпСервіс" знижка -10% для пенсіонерів м.Києва
     </div>
 
     <div
-      x-data="{open: false, name: 'Обрати матеріал', id: null}"
-      :class="{'pb-[90px]' : id > 0 }"
+      x-data="{open: false, name: 'Прайс-лист: Обрати матеріал', id: null}"
+      :class="{'pb-[70px]' : id > 0 }"
       class="max-w-[500px] mx-auto relative">
       <div class="w-full relative">
-        <p class="text-center text-2xl text-yellow mb-3 font-bold">
-          Прайс-лист
-        </p>
         <button
           @click="open = !open"
-          x-text="name"
-          class="py-2 w-full px-3 text-white md:text-lg text-xs border-[2px] border-yellow rounded-[20px]">
-          Обрати матеріал
+          class="flex justify-between items-center py-2 w-full px-3 text-black bg-yellow md:text-lg text-xs border-[2px] border-yellow rounded-[20px]">
+          <span x-text="name"></span>
+          <span x-show="!open" class="font-bold">+</span>
+          <span x-show="open" class="font-bold text-2xl">-</span>
         </button>
         <ul
           x-show="open"
@@ -612,7 +610,7 @@
         </ul>
       </div>
 
-      <ul x-show="id == 1" x-transition.duration.1000ms class="absolute top-[75px] md:top-[90px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
+      <ul x-show="id == 1" x-transition.duration.1000ms class="absolute top-8 md:top-[50px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
         <li class="flex">
           <p class="w-1/2">1 квартира</p>
           <p class="w-1/2 border-l-[2px] border-yellow pl-4">1100₴ / м.кв</p>
@@ -627,7 +625,7 @@
         </li>
       </ul>
 
-      <ul x-show="id == 2" x-transition.duration.1000ms class="absolute top-[75px] md:top-[90px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
+      <ul x-show="id == 2" x-transition.duration.1000ms class="absolute top-8 md:top-[50px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
         <li class="flex">
           <p class="w-1/2">1 квартира</p>
           <p class="w-1/2 border-l-[2px] border-yellow pl-4">1150₴ / м.кв</p>
@@ -642,7 +640,7 @@
         </li>
       </ul>
 
-      <ul x-show="id == 3" x-transition.duration.1000ms class="absolute top-[75px] md:top-[90px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
+      <ul x-show="id == 3" x-transition.duration.1000ms class="absolute top-8 md:top-[50px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
         <li class="flex">
           <p class="w-1/2">1 квартира</p>
           <p class="w-1/2 border-l-[2px] border-yellow pl-4">1250₴ / м.кв</p>
@@ -657,7 +655,7 @@
         </li>
       </ul>
 
-      <ul x-show="id == 4" x-transition.duration.1000ms class="absolute top-[75px] md:top-[90px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
+      <ul x-show="id == 4" x-transition.duration.1000ms class="absolute top-8 md:top-[50px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
         <li class="flex">
           <p class="w-1/2">1 квартира</p>
           <p class="w-1/2 border-l-[2px] border-yellow pl-4">1350₴ / м.кв</p>
@@ -672,7 +670,7 @@
         </li>
       </ul>
 
-      <ul x-show="id == 5" x-transition.duration.1000ms class="absolute top-[75px] md:top-[90px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
+      <ul x-show="id == 5" x-transition.duration.1000ms class="absolute top-8 md:top-[50px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
         <li class="flex">
           <p class="w-1/2">1 квартира</p>
           <p class="w-1/2 border-l-[2px] border-yellow pl-4">1400₴ / м.кв</p>
