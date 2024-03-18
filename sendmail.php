@@ -27,7 +27,7 @@
    //От кого письмо
    $mail->setFrom('pendulumplay@gmail.com', 'ПромАльпСервіс');
    //Кому отправить
-   $mail->addAddress('info@uteplenie.org');
+   $mail->addAddress('promservisalp@gmail.com');
 
    //Тема письма
    $mail->Subject = 'ПромАльпСервіс';
