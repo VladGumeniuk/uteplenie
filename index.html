@@ -567,14 +567,18 @@
     </div>
 
     <div
-      x-data="{open: false, name: 'Прайс-лист: Обрати матеріал', id: null}"
+      x-data="{open: false, name: 'Обрати матеріал', id: null}"
       :class="{'pb-[70px]' : id > 0 }"
       class="max-w-[500px] mx-auto relative">
       <div class="w-full relative">
         <button
           @click="open = !open"
-          class="flex justify-between items-center py-2 w-full px-3 text-black bg-yellow md:text-lg text-xs border-[2px] border-yellow rounded-[20px]">
-          <span x-text="name"></span>
+          class="flex justify-between items-center py-2 w-full px-3 text-black bg-[#7FFF00] md:text-lg text-xs border-[2px] border-yellow rounded-[20px]">
+          <p></p>
+          <p>
+            <span>Прайс-лист:</span> <br>
+            <span x-text="name"></span>
+          </p>
           <span x-show="!open" class="font-bold">+</span>
           <span x-show="open" class="font-bold text-2xl">-</span>
         </button>
@@ -610,7 +614,7 @@
         </ul>
       </div>
 
-      <ul x-show="id == 1" x-transition.duration.1000ms class="absolute top-8 md:top-[50px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
+      <ul x-show="id == 1" x-transition.duration.1000ms class="absolute top-10 md:top-[70px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
         <li class="flex">
           <p class="w-1/2">1 квартира</p>
           <p class="w-1/2 border-l-[2px] border-yellow pl-4">1100₴ / м.кв</p>
@@ -625,7 +629,7 @@
         </li>
       </ul>
 
-      <ul x-show="id == 2" x-transition.duration.1000ms class="absolute top-8 md:top-[50px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
+      <ul x-show="id == 2" x-transition.duration.1000ms class="absolute top-10 md:top-[70px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
         <li class="flex">
           <p class="w-1/2">1 квартира</p>
           <p class="w-1/2 border-l-[2px] border-yellow pl-4">1150₴ / м.кв</p>
@@ -640,7 +644,7 @@
         </li>
       </ul>
 
-      <ul x-show="id == 3" x-transition.duration.1000ms class="absolute top-8 md:top-[50px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
+      <ul x-show="id == 3" x-transition.duration.1000ms class="absolute top-10-8 md:top-[70px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
         <li class="flex">
           <p class="w-1/2">1 квартира</p>
           <p class="w-1/2 border-l-[2px] border-yellow pl-4">1250₴ / м.кв</p>
@@ -655,7 +659,7 @@
         </li>
       </ul>
 
-      <ul x-show="id == 4" x-transition.duration.1000ms class="absolute top-8 md:top-[50px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
+      <ul x-show="id == 4" x-transition.duration.1000ms class="absolute top-10 md:top-[70px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
         <li class="flex">
           <p class="w-1/2">1 квартира</p>
           <p class="w-1/2 border-l-[2px] border-yellow pl-4">1350₴ / м.кв</p>
@@ -670,7 +674,7 @@
         </li>
       </ul>
 
-      <ul x-show="id == 5" x-transition.duration.1000ms class="absolute top-8 md:top-[50px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
+      <ul x-show="id == 5" x-transition.duration.1000ms class="absolute top-10 md:top-[70px] md:text-lg text-xs text-white w-full mt-6 px-5 space-y-3">
         <li class="flex">
           <p class="w-1/2">1 квартира</p>
           <p class="w-1/2 border-l-[2px] border-yellow pl-4">1400₴ / м.кв</p>
