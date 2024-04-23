@@ -3709,6 +3709,36 @@ const our_works = [{
 }, {
   id: 40,
   img: "./img/mainPage/our-works/40.jpg"
+}, {
+  id: 41,
+  img: "./img/mainPage/our-works/41.jpg"
+}, {
+  id: 42,
+  img: "./img/mainPage/our-works/42.jpg"
+}, {
+  id: 43,
+  img: "./img/mainPage/our-works/43.jpg"
+}, {
+  id: 44,
+  img: "./img/mainPage/our-works/44.jpg"
+}, {
+  id: 45,
+  img: "./img/mainPage/our-works/45.jpg"
+}, {
+  id: 46,
+  img: "./img/mainPage/our-works/46.jpg"
+}, {
+  id: 47,
+  img: "./img/mainPage/our-works/47.jpg"
+}, {
+  id: 48,
+  img: "./img/mainPage/our-works/48.jpg"
+}, {
+  id: 49,
+  img: "./img/mainPage/our-works/49.jpg"
+}, {
+  id: 50,
+  img: "./img/mainPage/our-works/50.jpg"
 }];
 
 /***/ }),
