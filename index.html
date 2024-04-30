@@ -148,6 +148,16 @@
 
 </section>
 
+        <section class="section">
+  <div class="flex justify-center">
+    <div class="relative max-w-[450px] rounded-[30px] overflow-hidden">
+      <img src="/img/mainPage/promo.jpg" alt="images">
+      <div class="absolute text-center left-0 right-0 bottom-0 bg-black/70 py-3">
+        <p class="text-yellow text-base font-medium" x-text="$store.currentLanguage.lang.hero.free"></p>
+      </div>
+    </div>
+  </div>
+</section>
         <style>
   .swiper-wrapper {
     -webkit-transition-timing-function: linear !important;
@@ -336,7 +346,7 @@
     <h2 class="font-bold text-center md:text-5xl text-2xl mb-7 text-black"
         x-text="$store.currentLanguage.lang.insulate.title2">
     </h2>
-    <ul class="flex flex-wrap justify-center gap-x-10 gap-y-[30px]">
+    <ul class="md:flex flex-wrap justify-center gap-x-10 gap-y-[30px] hidden">
       <li class="text-center">
         <div class="flex justify-center">
           <img src="./img/mainPage/team/team1.jpg" alt="team1" class="rounded-[20px] aspect-square max-w-[250px]">
@@ -403,6 +413,73 @@
         <p x-text="$store.currentLanguage.lang.insulate.team6.stage"></p>
       </li>
     </ul>
+
+    <div x-data="sliderSwiper('team')" class="swiper md:hidden" style="transform: translateX(30px) !important;">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide text-center bg-black rounded-[20px] overflow-hidden max-w-[250px] pb-2 shadow-lg">
+          <div class="flex justify-center">
+            <img src="./img/mainPage/team/team1.jpg" alt="team1" class="aspect-square max-w-[250px]">
+          </div>
+          <h3 class="mt-2 font-bold text-yellow"
+              x-text="$store.currentLanguage.lang.insulate.team1.name">
+          </h3>
+          <p class="text-[14px] text-yellow" x-text="$store.currentLanguage.lang.insulate.job"></p>
+          <p class="text-[14px] text-yellow" x-text="$store.currentLanguage.lang.insulate.team1.stage"></p>
+        </div>
+
+        <div class="swiper-slide text-center bg-yellow rounded-[20px] overflow-hidden max-w-[250px] pb-2 shadow-lg">
+          <div class="flex justify-center">
+            <img src="./img/mainPage/team/team2.jpg" alt="team1" class="rounded-[20px] aspect-square max-w-[250px]">
+          </div>
+          <h3 class="mt-2 font-bold"
+              x-text="$store.currentLanguage.lang.insulate.team2.name">
+          </h3>
+          <p class="text-[14px]" x-text="$store.currentLanguage.lang.insulate.job"></p>
+          <p class="text-[14px]" x-text="$store.currentLanguage.lang.insulate.team2.stage"></p>
+        </div>
+        <div class="swiper-slide text-center bg-black rounded-[20px] overflow-hidden max-w-[250px] pb-2 shadow-lg">
+          <div class="flex justify-center">
+            <img src="./img/mainPage/team/team3.jpg" alt="team1" class="aspect-square max-w-[250px]">
+          </div>
+          <h3 class="mt-2 font-bold text-yellow"
+              x-text="$store.currentLanguage.lang.insulate.team3.name">
+          </h3>
+          <p class="text-[14px] text-yellow" x-text="$store.currentLanguage.lang.insulate.job"></p>
+          <p class="text-[14px] text-yellow" x-text="$store.currentLanguage.lang.insulate.team3.stage"></p>
+        </div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide text-center bg-yellow rounded-[20px] overflow-hidden max-w-[250px] pb-2 shadow-lg">
+          <div class="flex justify-center">
+            <img src="./img/mainPage/team/team4.jpg" alt="team1" class="rounded-[20px] aspect-square max-w-[250px]">
+          </div>
+          <h3 class="mt-2 font-bold"
+              x-text="$store.currentLanguage.lang.insulate.team4.name">
+          </h3>
+          <p class="text-[14px]" x-text="$store.currentLanguage.lang.insulate.job"></p>
+          <p class="text-[14px]" x-text="$store.currentLanguage.lang.insulate.team4.stage"></p>
+        </div>
+        <div class="swiper-slide text-center bg-black rounded-[20px] overflow-hidden max-w-[250px] pb-2 shadow-lg">
+          <div class="flex justify-center">
+            <img src="./img/mainPage/team/team5.jpg" alt="team1" class="aspect-square max-w-[250px]">
+          </div>
+          <h3 class="mt-2 font-bold text-yellow"
+              x-text="$store.currentLanguage.lang.insulate.team1.name">
+          </h3>
+          <p class="text-[14px] text-yellow" x-text="$store.currentLanguage.lang.insulate.job"></p>
+          <p class="text-[14px] text-yellow" x-text="$store.currentLanguage.lang.insulate.team5.stage"></p>
+        </div>
+        <div class="swiper-slide text-center bg-yellow rounded-[20px] overflow-hidden max-w-[250px] pb-2 shadow-lg">
+          <div class="flex justify-center">
+            <img src="./img/mainPage/team/team6.jpg" alt="team1" class="rounded-[20px] aspect-square max-w-[250px]">
+          </div>
+          <h3 class="mt-2 font-bold"
+              x-text="$store.currentLanguage.lang.insulate.team6.name">
+          </h3>
+          <p class="text-[14px]" x-text="$store.currentLanguage.lang.insulate.job"></p>
+          <p class="text-[14px]" x-text="$store.currentLanguage.lang.insulate.team6.stage"></p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
         <section class="section">

@@ -3478,6 +3478,44 @@ const content = () => ({
 
 /***/ }),
 
+/***/ "./src/js/components/slider-swiper.js":
+/*!********************************************!*\
+  !*** ./src/js/components/slider-swiper.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   sliderSwiper: () => (/* binding */ sliderSwiper)
+/* harmony export */ });
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.EffectCards]);
+const sliderOptions = {
+  team: {
+    // spaceBetween: 20,
+    loop: false,
+    slidesPerView: 1,
+    // autoHeight: true,
+    effect: "cards",
+    grabCursor: true,
+    centeredSlides: true
+  }
+};
+const sliderSwiper = sliderOption => ({
+  slider: null,
+  init() {
+    document.addEventListener('DOMContentLoaded', () => {
+      this.initSwiper();
+    });
+  },
+  initSwiper() {
+    this.slider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](this.$el, sliderOptions[sliderOption]);
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/store/currentLanguage.js":
 /*!*****************************************!*\
   !*** ./src/js/store/currentLanguage.js ***!
@@ -3802,7 +3840,8 @@ const ru = {
       text2: '- Работаем по договору',
       text3: '- Качественные материалы'
     },
-    btnText: 'Бесплатный просчет стоимости'
+    btnText: 'Бесплатный просчет стоимости',
+    free: 'Менеджер от компании ПромАльпСервис выезжает на замер объекта БЕСПЛАТНО!'
   },
   works: {
     title: 'Наши работы',
@@ -3952,7 +3991,8 @@ const ua = {
       text2: '- Працюємо по договору',
       text3: '- Якісні матеріали'
     },
-    btnText: 'Безкоштовний прорахунок вартості'
+    btnText: 'Безкоштовний прорахунок вартості',
+    free: 'Менеджер від компанії ПромАльпСервіс виїжджає на замір об\'єкту БЕЗКОШТОВНО!'
   },
   works: {
     title: 'Наші роботи',
@@ -16638,6 +16678,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_stop_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/stop-scroll */ "./src/js/store/stop-scroll.js");
 /* harmony import */ var _components_content__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/content */ "./src/js/components/content.js");
 /* harmony import */ var _store_currentLanguage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./store/currentLanguage */ "./src/js/store/currentLanguage.js");
+/* harmony import */ var _components_slider_swiper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/slider-swiper */ "./src/js/components/slider-swiper.js");
+
 
 
 
@@ -16650,6 +16692,7 @@ document.addEventListener('alpine:init', () => {
   alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].store("stopScroll", _store_stop_scroll__WEBPACK_IMPORTED_MODULE_3__.stopScroll);
   alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].store("currentLanguage", _store_currentLanguage__WEBPACK_IMPORTED_MODULE_5__.currentLanguage);
   alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data("content", _components_content__WEBPACK_IMPORTED_MODULE_4__.content);
+  alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data("sliderSwiper", _components_slider_swiper__WEBPACK_IMPORTED_MODULE_6__.sliderSwiper);
 });
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
